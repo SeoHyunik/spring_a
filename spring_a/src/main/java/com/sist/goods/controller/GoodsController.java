@@ -21,6 +21,14 @@ public class GoodsController {
 		this.dao = dao;
 	}
 	
+	@RequestMapping("/detailGoods.do")
+	public ModelAndView detail(int no) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("g",dao.select(no));
+		return mav;
+	}
+	
+	
 	@RequestMapping("/listGoods.do")
 	public ModelAndView listGoods(String keyword, String orderField, 
 												HttpSession session) {

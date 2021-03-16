@@ -16,4 +16,9 @@ public class GoodsDao {
 		return GoodsManager.findAll(map);
 	}//findAll
 	
+	public GoodsVo select(int no) {
+		return GoodsManager.select(no);
+	}
+	
+	
 }//class

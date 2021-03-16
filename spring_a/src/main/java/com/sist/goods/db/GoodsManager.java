@@ -36,4 +36,12 @@ public class GoodsManager {
 		return list;
 	}//findAll
 	
+	public static GoodsVo select(int no) {
+		SqlSession session = factory.openSession();
+		GoodsVo g = session.selectOne("goods.select",no);
+		session.close();
+		return g;
+	}
+	
+	
 }//class
